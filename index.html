@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WoodCraft Furniture</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <div class="logo">
+            Wood<span>Craft</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Furniture</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cart">
+            🛒 <span id="cartCount">0</span>
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">PREMIUM FURNITURE</p>
+
+            <h1>
+                Make Your Home
+                <span>Beautiful</span>
+            </h1>
+
+            <p>
+                Discover elegant and comfortable furniture
+                designed to make your home more beautiful.
+            </p>
+
+            <a href="#products" class="btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-container">
+
+            <button onclick="filterProducts('all')">
+                All
+            </button>
+
+            <button onclick="filterProducts('sofa')">
+                Sofas
+            </button>
+
+            <button onclick="filterProducts('chair')">
+                Chairs
+            </button>
+
+            <button onclick="filterProducts('table')">
+                Tables
+            </button>
+
+            <button onclick="filterProducts('bed')">
+                Beds
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products" id="products">
+
+        <h2>Our Furniture</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search furniture..."
+                onkeyup="searchProducts()"
+            >
+
+        </div>
+
+
+        <div class="product-container" id="productContainer">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card" data-category="sofa">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80"
+                    alt="Modern Sofa"
+                >
+
+                <div class="product-info">
+
+                    <h3>Modern Sofa</h3>
+
+                    <p>
+                        Comfortable premium sofa for your living room.
+                    </p>
+
+                    <h4>₹24,999</h4>
+
+                    <button onclick="addToCart()">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card" data-category="chair">
+
+                <img
+                    src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80"
+                    alt="Wooden Chair"
+                >
+
+                <div class="product-info">
+
+                    <h3>Wooden Chair</h3>
+
+                    <p>
+                        Stylish wooden chair with comfortable seating.
+                    </p>
+
+                    <h4>₹4,999</h4>
+
+                    <button onclick="addToCart()">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card" data-category="table">
+
+                <img
+                    src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=800&q=80"
+                    alt="Dining Table"
+                >
+
+                <div class="product-info">
+
+                    <h3>Dining Table</h3>
+
+                    <p>
+                        Elegant dining table for modern homes.
+                    </p>
+
+                    <h4>₹18,499</h4>
+
+                    <button onclick="addToCart()">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card" data-category="bed">
+
+                <img
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
+                    alt="Luxury Bed"
+                >
+
+                <div class="product-info">
+
+                    <h3>Luxury Bed</h3>
+
+                    <p>
+                        Premium wooden bed for a peaceful sleep.
+                    </p>
+
+                    <h4>₹32,999</h4>
+
+                    <button onclick="addToCart()">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card" data-category="chair">
+
+                <img
+                    src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=80"
+                    alt="Comfort Chair"
+                >
+
+                <div class="product-info">
+
+                    <h3>Comfort Chair</h3>
+
+                    <p>
+                        Modern chair perfect for your living room.
+                    </p>
+
+                    <h4>₹7,499</h4>
+
+                    <button onclick="addToCart()">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card" data-category="table">
+
+                <img
+                    src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80"
+                    alt="Coffee Table"
+                >
+
+                <div class="product-info">
+
+                    <h3>Coffee Table</h3>
+
+                    <p>
+                        Minimal wooden coffee table for your home.
+                    </p>
+
+                    <h4>₹8,999</h4>
+
+                    <button onclick="addToCart()">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80"
+                alt="Furniture Interior"
+            >
+
+        </div>
+
+        <div class="about-content">
+
+            <p class="small-title">
+                ABOUT WOODCRAFT
+            </p>
+
+            <h2>
+                Furniture Made
+                With Passion
+            </h2>
+
+            <p>
+                At WoodCraft, we create high-quality furniture
+                using premium materials and modern designs.
+            </p>
+
+            <p>
+                Our goal is to bring comfort, style and durability
+                to every home.
+            </p>
+
+            <button class="btn" onclick="showMessage()">
+                Learn More
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+
+                <div class="icon">
+                    🚚
+                </div>
+
+                <h3>Free Delivery</h3>
+
+                <p>
+                    Free delivery for orders above ₹10,000.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">
+                    🛠️
+                </div>
+
+                <h3>Easy Installation</h3>
+
+                <p>
+                    Professional installation at your doorstep.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">
+                    ⭐
+                </div>
+
+                <h3>Premium Quality</h3>
+
+                <p>
+                    High-quality materials and durable designs.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>Customer Support</h3>
+
+                <p>
+                    Our support team is always ready to help.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Have a question? Send us a message.
+        </p>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Wood<span>Craft</span>
+        </div>
+
+        <p>
+            Quality Furniture. Beautiful Living.
+        </p>
+
+        <p>
+            © 2026 WoodCraft Furniture. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
